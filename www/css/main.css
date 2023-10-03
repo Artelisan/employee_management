@@ -1,0 +1,39 @@
+.form {
+  background-color: #15172b;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 320px;
+  margin: 0 auto;
+}
+.form .form-group {
+  margin-bottom: 1rem;
+}
+.form .form-control {
+  background-color: #303245;
+  border: none;
+  color: #eee;
+}
+.form h1 {
+  padding: 15px;
+}
+.form .title {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.form .subtitle {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+#frm-employeeForm {
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */

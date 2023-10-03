@@ -1,0 +1,48 @@
+{layout '../@layout.latte'}
+
+{block content}
+    <h1>Employees age chart</h1>
+
+    <canvas id="ageChart" width="400" height="400"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById("ageChart").getContext("2d");
+        var ageChart = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: {$labels},
+                datasets: [
+                    {
+                        label: "Number of Employees",
+                        data: {$data},
+                        backgroundColor: "rgba(75, 192, 192, 0.2)",
+                        borderColor: "rgba(75, 192, 192, 1)",
+                        borderWidth: 2,
+                        barThickness: 10
+                    },
+                ],
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: "Number of Employees",
+                        },
+                        ticks: {
+                            precision: 0,
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: "Age",
+                        },
+                    },
+                },
+            },
+        });
+    </script>
+{/block}
